@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Battle Arena</title>
+  <!-- Tailwind CSS y Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #050505 60%, #00f2ff 100%);
+      font-family: 'Exo 2', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Menú principal -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-gaming neon-text">BATTLE ARENA</a>
+      <!-- Menú de escritorio -->
+      <div class="hidden md:flex space-x-10 items-center">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="videos.html" class="nav-link">Videos</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contactos.html" class="nav-link active">Contacto</a>
+        <!-- Botón modo día/noche -->
+        <button id="theme-toggle" class="ml-6 text-white text-2xl focus:outline-none" title="Cambiar modo">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+      </div>
+      <!-- Menú móvil -->
+      <div class="mobile-menu">
+        <button class="absolute top-5 right-5 text-white text-2xl" id="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="videos.html" class="nav-link">Videos</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contactos.html" class="nav-link active">Contacto</a>
+        <!-- Botón modo día/noche móvil -->
+        <button id="theme-toggle-mobile" class="mt-8 text-white text-2xl focus:outline-none w-full flex justify-center" title="Cambiar modo">
+          <i id="theme-icon-mobile" class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-32 pb-16 container mx-auto px-4">
+    <h1 class="text-4xl font-gaming neon-text mb-10 text-center">Contáctanos</h1>
+    <!-- Tabla de información de contacto -->
+    <div class="overflow-x-auto contact-section">
+      <table class="contact-table">
+        <tr>
+          <th>Departamento</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+        </tr>
+        <tr>
+          <td>Soporte</td>
+          <td>soporte@battlearena.com</td>
+          <td>+51 999 888 777</td>
+        </tr>
+        <tr>
+          <td>Organización</td>
+          <td>eventos@battlearena.com</td>
+          <td>+51 988 777 666</td>
+        </tr>
+        <tr>
+          <td>Prensa</td>
+          <td>prensa@battlearena.com</td>
+          <td>+51 977 666 555</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Formulario de contacto -->
+    <form class="max-w-xl mx-auto contact-section contact-form" id="contact-form">
+      <h2 class="text-2xl font-bold mb-6 neon-text text-center">Envíanos un mensaje</h2>
+      <input type="text" placeholder="Nombre" class="w-full px-4 py-2 rounded-lg focus:outline-none" required>
+      <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg focus:outline-none" required>
+      <input type="tel" placeholder="Teléfono (+51)" class="w-full px-4 py-2 rounded-lg focus:outline-none" required>
+      <textarea placeholder="Mensaje" rows="4" class="w-full px-4 py-2 rounded-lg focus:outline-none" required></textarea>
+      <button type="submit" class="custom-btn bg-neon-blue text-black font-bold py-2 px-6 rounded-full w-full">Enviar</button>
+    </form>
+    <!-- Mapa de Google (Lima, Perú) -->
+    <div class="max-w-2xl mx-auto mapa-lima">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.914929934112!2d-77.04279368465136!3d-12.04637314509809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c1b2e7e7e7%3A0x7e7e7e7e7e7e7e7e!2sLima%2C%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1687040000000!5m2!1ses!2spe" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-darker-bg mt-auto pt-16 pb-8">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      <p>&copy; 2025 Battle Arena. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

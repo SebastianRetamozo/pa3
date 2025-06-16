@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosotros - Battle Arena</title>
+  <!-- Tailwind CSS y Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: linear-gradient(120deg, #050505 60%, #b700ff 100%);
+      font-family: 'Exo 2', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Menú principal -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 py-4 shadow-lg">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-gaming neon-text">BATTLE ARENA</a>
+      <!-- Menú de escritorio -->
+      <div class="hidden md:flex space-x-10 items-center">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="videos.html" class="nav-link">Videos</a>
+        <a href="nosotros.html" class="nav-link active">Nosotros</a>
+        <a href="contactos.html" class="nav-link">Contacto</a>
+        <!-- Botón modo día/noche -->
+        <button id="theme-toggle" class="ml-6 text-white text-2xl focus:outline-none" title="Cambiar modo">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+      </div>
+      <!-- Menú móvil -->
+      <div class="mobile-menu">
+        <button class="absolute top-5 right-5 text-white text-2xl" id="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="videos.html" class="nav-link">Videos</a>
+        <a href="nosotros.html" class="nav-link active">Nosotros</a>
+        <a href="contactos.html" class="nav-link">Contacto</a>
+        <!-- Botón modo día/noche móvil -->
+        <button id="theme-toggle-mobile" class="mt-8 text-white text-2xl focus:outline-none w-full flex justify-center" title="Cambiar modo">
+          <i id="theme-icon-mobile" class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-32 pb-16 container mx-auto px-4">
+    <h1 class="text-4xl font-gaming neon-text mb-10 text-center">Sobre Nosotros</h1>
+    <div class="nosotros-grid">
+      <!-- Historia en columnas -->
+      <section class="historia nosotros-card historia-columns">
+        <h2 class="text-2xl font-bold neon-text mb-4">Nuestra Historia</h2>
+        <p>
+          Battle Arena nació en 2020 con la visión de crear una comunidad gamer inclusiva y competitiva en Latinoamérica. Desde nuestros primeros torneos online hasta los eventos presenciales con cientos de asistentes, hemos crecido gracias a la pasión de nuestros jugadores y el apoyo de nuestros sponsors.
+          <br><br>
+          Hoy somos referentes en organización de torneos de eSports, brindando experiencias únicas tanto para amateurs como para profesionales. Nuestro compromiso es seguir innovando y expandiendo el mundo de los videojuegos competitivos.
+        </p>
+      </section>
+      <!-- Misión y valores -->
+      <section class="mision nosotros-card">
+        <h2 class="text-2xl font-bold neon-text mb-4">Misión y Valores</h2>
+        <ul class="list-disc pl-6 text-gray-300">
+          <li>Fomentar la sana competencia y el respeto entre jugadores.</li>
+          <li>Promover la inclusión y diversidad en los eSports.</li>
+          <li>Ofrecer eventos de alta calidad y producción profesional.</li>
+          <li>Apoyar el crecimiento de nuevos talentos.</li>
+        </ul>
+      </section>
+      <!-- Equipo -->
+      <aside class="equipo nosotros-card flex flex-col items-center">
+        <h2 class="text-2xl font-bold neon-text mb-4">Nuestro Equipo</h2>
+        <img src="imagenes/avatar-equipo.png" alt="Equipo" class="avatar-image mb-4" width="120">
+        <p class="text-gray-300 text-center">Un grupo multidisciplinario de gamers, organizadores y creativos apasionados por los videojuegos y la tecnología.</p>
+      </aside>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-darker-bg mt-auto pt-16 pb-8">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      <p>&copy; 2025 Battle Arena. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

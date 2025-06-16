@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battle Arena - Blog</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuración personalizada de Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'neon-blue': '#00f2ff',
+            'neon-purple': '#b700ff',
+            'neon-pink': '#ff00e6',
+            'dark-bg': '#0a0a0a',
+            'darker-bg': '#050505',
+          },
+          fontFamily: {
+            'gaming': ['"Rubik Mono One"', 'sans-serif'],
+            'body': ['"Exo 2"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <!-- Fuentes y estilos externos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Preloader (pantalla de carga) -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- Navegación principal -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md py-4 shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-gaming neon-text">BATTLE ARENA</a>
+        <!-- Menú de escritorio -->
+        <div class="hidden md:flex space-x-10 items-center">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="galeria.html" class="nav-link">Galería</a>
+          <a href="videos.html" class="nav-link">Videos</a>
+          <a href="nosotros.html" class="nav-link">Nosotros</a>
+          <a href="contactos.html" class="nav-link">Contacto</a>
+          <!-- Botón modo día/noche -->
+          <button id="theme-toggle" class="ml-6 text-white text-2xl focus:outline-none" title="Cambiar modo">
+            <i id="theme-icon" class="fas fa-moon"></i>
+          </button>
+        </div>
+        <!-- Botón menú móvil -->
+        <button class="md:hidden text-white text-2xl" id="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Menú móvil -->
+  <div class="mobile-menu">
+    <button class="absolute top-5 right-5 text-white text-2xl" id="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="galeria.html" class="nav-link">Galería</a>
+    <a href="videos.html" class="nav-link">Videos</a>
+    <a href="nosotros.html" class="nav-link">Nosotros</a>
+    <a href="contactos.html" class="nav-link">Contacto</a>
+    <!-- Botón modo día/noche móvil -->
+    <button id="theme-toggle-mobile" class="mt-8 text-white text-2xl focus:outline-none w-full flex justify-center" title="Cambiar modo">
+      <i id="theme-icon-mobile" class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Sección principal del Blog -->
+  <section id="blog" class="page active pt-24">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl md:text-5xl font-gaming mb-16 neon-text text-center" data-aos="fade-up">BLOG DE LA ARENA</h1>
+      <!-- Mini resumen del torneo -->
+      <section class="bg-darker-bg dark:bg-[#181818] py-12 border-b border-gray-800 dark:border-gray-700 rounded-xl shadow-xl mb-12">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-gaming mb-4 text-center neon-text" data-aos="fade-up">Resumen del Último Torneo</h2>
+          <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6 text-center" data-aos="fade-up" data-aos-delay="100">
+            ¡El Torneo <span class="font-bold text-neon-blue">Battle Arena 2025</span> fue un éxito total! Más de 200 jugadores compitieron en juegos como <span class="font-bold text-neon-purple">Valorant</span>, <span class="font-bold text-neon-pink">Fortnite</span> y <span class="font-bold text-neon-blue">League of Legends</span>.
+            <br><br>
+            El evento se celebró durante tres días llenos de adrenalina, donde los equipos demostraron su destreza y trabajo en equipo. La gran final de Valorant mantuvo a todos al borde de sus asientos, con una remontada épica de <span class="font-bold text-neon-blue">AlphaGamers</span> en el último mapa.
+            <br><br>
+            <span class="italic text-neon-blue">"Nunca habíamos sentido tanta presión, pero la energía del público nos impulsó a dar lo mejor,"</span> comentó <span class="font-bold text-neon-purple">SofiFire</span>, capitana de AlphaGamers, tras recibir el trofeo.
+            <br><br>
+            Por su parte, <span class="font-bold text-neon-pink">DarkWolves</span>, subcampeones de Fortnite, destacaron la organización y el ambiente: <span class="italic text-neon-pink">"Competir aquí es una experiencia única. Volveremos más fuertes el próximo año,"</span> aseguró su líder, <span class="font-bold text-neon-pink">Rex</span>.
+            <br><br>
+            Además de las partidas, hubo paneles con expertos, zonas de juego libre y sorteos de periféricos gamer. Los asistentes disfrutaron de entrevistas exclusivas, sesiones de fotos y la oportunidad de conocer a sus streamers favoritos.
+            <br><br>
+            La comunidad vibró con cada partida y los espectadores disfrutaron de transmisiones en vivo con narración profesional. ¡Gracias a todos los participantes, sponsors y espectadores por hacerlo posible! Ya estamos preparando la próxima edición con más sorpresas, invitados internacionales y premios aún más grandes.
+          </p>
+          <!-- Botones a páginas de torneos -->
+          <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+            <a href="blog-torneo1.html" class="custom-btn bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition">Ver Torneo Valorant</a>
+            <a href="blog-torneo2.html" class="custom-btn bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition">Ver Torneo Fortnite</a>
+            <a href="blog-torneo3.html" class="custom-btn bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition">Ver Torneo LoL</a>
+          </div>
+        </div>
+      </section>
+      <!-- Más entradas del blog -->
+      <h2 class="text-3xl font-gaming mb-4 text-center neon-text" data-aos="fade-up">Más de nuestro blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Artículo 1 -->
+        <article class="blog-card rounded-xl p-6 bg-darker-bg shadow-lg" data-aos="fade-up">
+          <img src="imagenes/blog1.jpg" alt="eSports" class="rounded-lg mb-4 h-48 w-full object-cover border-4 border-neon-blue">
+          <h2 class="text-2xl font-bold mb-2 neon-pink-text">¿Qué son los eSports?</h2>
+          <p class="text-gray-300 mb-4">Descubre el mundo de los deportes electrónicos, su historia y cómo han revolucionado la industria del entretenimiento. Los eSports han pasado de pequeños torneos locales a llenar estadios y mover millones de espectadores en todo el mundo.</p>
+          <a href="blog-esports.html" class="text-neon-blue font-bold hover:underline">Leer más</a>
+        </article>
+        <!-- Artículo 2 -->
+        <article class="blog-card rounded-xl p-6 bg-darker-bg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <img src="imagenes/blog2.jpg" alt="Arcade" class="rounded-lg mb-4 h-48 w-full object-cover border-4 border-neon-purple">
+          <h2 class="text-2xl font-bold mb-2 neon-pink-text">La evolución de los torneos</h2>
+          <p class="text-gray-300 mb-4">Desde los salones arcade hasta los estadios llenos de fans, así han cambiado los torneos de videojuegos. Hoy en día, la tecnología y la conectividad han permitido que cualquier jugador pueda competir desde casa y alcanzar la gloria.</p>
+          <a href="blog-evolucion.html" class="text-neon-blue font-bold hover:underline">Leer más</a>
+        </article>
+        <!-- Artículo 3 -->
+        <article class="blog-card rounded-xl p-6 bg-darker-bg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+          <img src="imagenes/blog3.jpeg" alt="Comunidad" class="rounded-lg mb-4 h-48 w-full object-cover border-4 border-neon-pink">
+          <h2 class="text-2xl font-bold mb-2 neon-pink-text">Tips para jugadores competitivos</h2>
+          <p class="text-gray-300 mb-4">Consejos de profesionales para mejorar tu rendimiento y mentalidad en la competencia. Aprende a entrenar, mantener la concentración y trabajar en equipo para alcanzar el siguiente nivel.</p>
+          <a href="blog-tips.html" class="text-neon-blue font-bold hover:underline">Leer más</a>
+        </article>
+      </div>
+      <!-- Botón para ver todas las publicaciones -->
+      <div class="flex justify-center mt-12">
+        <a href="blog-archivo.html" class="custom-btn bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:scale-105 transition" data-aos="fade-up">
+          Ver todas las publicaciones
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-darker-bg mt-auto pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-2xl font-gaming neon-text mb-6">BATTLE ARENA</h3>
+          <p class="text-gray-300 mb-6">La plataforma líder en torneos de videojuegos competitivos en Latinoamérica. Únete a la comunidad y demuestra tu habilidad.</p>
+          <!-- Redes sociales -->
+          <div class="flex space-x-6">
+            <a href="https://www.facebook.com/DeadxSnipper/" class="social-icon text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/boxyenergy/" class="social-icon text-2xl"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@BoxyEnergy" class="social-icon text-2xl"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/BoxyEnergy" class="social-icon text-2xl"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Torneos Activos</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Calendario</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Ranking</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Premios</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Reglas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Juegos</h3>
+          <ul class="space-y-3">
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Valorant</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Fortnite</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">League of Legends</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">CS:GO</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">FIFA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Contáctanos</h3>
+          <form id="contact-form">
+            <div class="mb-4">
+              <input type="text" placeholder="Nombre" class="w-full px-4 py-2 rounded-lg focus:outline-none">
+            </div>
+            <div class="mb-4">
+              <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg focus:outline-none">
+            </div>
+            <div class="mb-4">
+              <textarea placeholder="Mensaje" rows="3" class="w-full px-4 py-2 rounded-lg focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="custom-btn bg-neon-blue text-black font-bold py-2 px-6 rounded-full w-full">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 Battle Arena. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts principales -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

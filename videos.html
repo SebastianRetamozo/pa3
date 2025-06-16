@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battle Arena - Videos</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuración personalizada de Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'neon-blue': '#00f2ff',
+            'neon-purple': '#b700ff',
+            'neon-pink': '#ff00e6',
+            'dark-bg': '#0a0a0a',
+            'darker-bg': '#050505',
+          },
+          fontFamily: {
+            'gaming': ['"Rubik Mono One"', 'sans-serif'],
+            'body': ['"Exo 2"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <!-- Fuentes y estilos externos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Preloader (pantalla de carga) -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+  <!-- Navegación principal -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-80 backdrop-blur-md py-4 shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-gaming neon-text">BATTLE ARENA</a>
+        <!-- Menú de escritorio -->
+        <div class="hidden md:flex space-x-10 items-center">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="galeria.html" class="nav-link">Galería</a>
+          <a href="videos.html" class="nav-link">Videos</a>
+          <a href="nosotros.html" class="nav-link">Nosotros</a>
+          <a href="contactos.html" class="nav-link">Contacto</a>
+          <!-- Botón modo día/noche -->
+          <button id="theme-toggle" class="ml-6 text-white text-2xl focus:outline-none" title="Cambiar modo">
+            <i id="theme-icon" class="fas fa-moon"></i>
+          </button>
+        </div>
+        <!-- Botón menú móvil -->
+        <button class="md:hidden text-white text-2xl" id="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Menú móvil -->
+  <div class="mobile-menu">
+    <button class="absolute top-5 right-5 text-white text-2xl" id="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="galeria.html" class="nav-link">Galería</a>
+    <a href="videos.html" class="nav-link">Videos</a>
+    <a href="nosotros.html" class="nav-link">Nosotros</a>
+    <a href="contactos.html" class="nav-link">Contacto</a>
+    <!-- Botón modo día/noche móvil -->
+    <button id="theme-toggle-mobile" class="mt-8 text-white text-2xl focus:outline-none w-full flex justify-center" title="Cambiar modo">
+      <i id="theme-icon-mobile" class="fas fa-moon"></i>
+    </button>
+  </div>
+  <!-- Sección principal de videos -->
+  <section id="videos" class="page active pt-24">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl md:text-5xl font-gaming mb-16 neon-text text-center" data-aos="fade-up">VIDEOS DE TORNEOS</h1>
+      <!-- Videos destacados -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold mb-6 neon-pink-text">Highlights del Torneo Valorant 2025</h2>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/7D24SbGCFyQ" title="Valorant Tournament Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="mt-4 text-gray-300">Los mejores momentos de nuestro último torneo profesional de Valorant, donde los mejores equipos de Latinoamérica se enfrentaron por el título.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <h2 class="text-2xl font-bold mb-6 neon-pink-text">Entrevistas a Jugadores Profesionales</h2>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/IBEAv_gyfII" title="Entrevistas a Jugadores Profesionales" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p class="mt-4 text-gray-300">Conoce las historias detrás de los campeones: sus inicios, rutinas de entrenamiento y consejos para los jugadores aspirantes.</p>
+        </div>
+      </div>
+      <!-- Próximas transmisiones -->
+      <div class="mt-20">
+        <h2 class="text-2xl font-bold mb-8 neon-pink-text text-center" data-aos="fade-up">Próximas Transmisiones</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-darker-bg rounded-xl p-6" data-aos="fade-up">
+            <div class="text-neon-blue text-3xl mb-4">
+              <i class="fas fa-tv"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Grand Finals: Fortnite</h3>
+            <p class="text-gray-300 mb-4">La gran final del torneo Fortnite con los 10 mejores jugadores compitiendo por el premio mayor.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-neon-pink"><i class="far fa-calendar-alt mr-2"></i>25 Jun 2025</span>
+              <span class="text-white"><i class="far fa-clock mr-2"></i>20:00 GMT-5</span>
+            </div>
+          </div>
+          <div class="bg-darker-bg rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-neon-blue text-3xl mb-4">
+              <i class="fas fa-tv"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">League of Legends - Semifinales</h3>
+            <p class="text-gray-300 mb-4">Los cuatro mejores equipos se enfrentan en batallas épicas para llegar a la final del campeonato.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-neon-pink"><i class="far fa-calendar-alt mr-2"></i>28 Jun 2025</span>
+              <span class="text-white"><i class="far fa-clock mr-2"></i>18:00 GMT-5</span>
+            </div>
+          </div>
+          <div class="bg-darker-bg rounded-xl p-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-neon-blue text-3xl mb-4">
+              <i class="fas fa-tv"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">CS:GO Tournament - Clasificatorias</h3>
+            <p class="text-gray-300 mb-4">Primera ronda clasificatoria para el torneo internacional de Counter-Strike: Global Offensive.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-neon-pink"><i class="far fa-calendar-alt mr-2"></i>30 Jun 2025</span>
+              <span class="text-white"><i class="far fa-clock mr-2"></i>19:00 GMT-5</span>
+            </div>
+          </div>
+        </div>
+        <!-- Botón para ver calendario completo -->
+        <div class="flex justify-center mt-12">
+          <a href="javascript:void(0)" class="custom-btn bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-3 px-8 rounded-full text-lg" data-aos="fade-up">
+            Ver calendario completo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-darker-bg mt-auto pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-2xl font-gaming neon-text mb-6">BATTLE ARENA</h3>
+          <p class="text-gray-300 mb-6">La plataforma líder en torneos de videojuegos competitivos en Latinoamérica. Únete a la comunidad y demuestra tu habilidad.</p>
+          <!-- Redes sociales -->
+          <div class="flex space-x-6">
+            <a href="https://www.facebook.com/DeadxSnipper/" class="social-icon text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/boxyenergy/" class="social-icon text-2xl"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@BoxyEnergy" class="social-icon text-2xl"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/BoxyEnergy" class="social-icon text-2xl"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Torneos Activos</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Calendario</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Ranking</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Premios</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Reglas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Juegos</h3>
+          <ul class="space-y-3">
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Valorant</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">Fortnite</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">League of Legends</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">CS:GO</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-300 hover:text-neon-blue transition-colors">FIFA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-6">Contáctanos</h3>
+          <form id="contact-form">
+            <div class="mb-4">
+              <input type="text" placeholder="Nombre" class="w-full px-4 py-2 rounded-lg focus:outline-none">
+            </div>
+            <div class="mb-4">
+              <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg focus:outline-none">
+            </div>
+            <div class="mb-4">
+              <textarea placeholder="Mensaje" rows="3" class="w-full px-4 py-2 rounded-lg focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="custom-btn bg-neon-blue text-black font-bold py-2 px-6 rounded-full w-full">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 Battle Arena. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts principales -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
